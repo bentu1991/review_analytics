@@ -9,11 +9,15 @@ with open('reviews.txt', 'r') as f:
 			print(count)
 print('finish loading, there are', len(data), ' reviews')
 
-sum_len = 0
+
+new = []
 for d in data:
-	sum_len += len(d)
+	if len(d) < 100:
+		new.append(d)
+print('theres total of', len(new), 'reviews under 100 letters')
 	
 
-print('avg review length are', sum_len/ len(data))
+	
+
 
 	
